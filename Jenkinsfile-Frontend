@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                 git branch: 'main', credentialsId: 'github', url: 'https://github.com/maome2024/Three-Tier-DevSecOps'
+                 git branch: 'main', credentialsId: 'github', url: 'https://github.com/christyl23/Three-Tier-DevSecOps'
             }
         }
         stage('Sonarqube Analysis') {
@@ -94,8 +94,8 @@ pipeline {
                 dir('Kubernetes/Frontend') {
                      withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                         sh '''
-                            git config user.email "maome24.n@gmail.com"
-                            git config user.name "Ezenwanyi Obinigwe"
+                            git config user.email "christylhcare@gmail.com"
+                            git config user.name "Ada Jesus"
                             BUILD_NUMBER=${BUILD_NUMBER}
                             echo $BUILD_NUMBER
                             imageTag=$(grep -oP '(?<=frontend:)[^ ]+' deployment.yaml)

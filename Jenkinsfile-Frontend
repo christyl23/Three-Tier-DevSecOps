@@ -82,13 +82,13 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                 git branch: 'main', credentialsId: 'github', url: 'https://github.com/maome2024/Three-Tier-DevSecOps'
+                 git branch: 'main', credentialsId: 'github', url: 'https://github.com/christyl23/Three-Tier-DevSecOps'
             }
         }
         stage('Update Deployment file') {
             environment {
                 GIT_REPO_NAME = "Three-Tier-DevSecOps"
-                GIT_USER_NAME = "laxman-kandhukuri"
+                GIT_USER_NAME = "christyl23"
             }
             steps {
                 dir('Kubernetes/Frontend') {
